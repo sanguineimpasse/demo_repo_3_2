@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Initiation</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,600&family=IBM+Plex+Serif&display=swap');*{box-sizing:border-box;font-family:Barlow,sans-serif,serif}body{margin:0;padding:0;display:flex;justify-content:center;align-items:center;min-height:100vh;background-image:url('https://images.unsplash.com/photo-1614724723656-457e78e0b50b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2017&q=80');background-size:cover;background-position:center}main{display:block;width:49vw}div.loginbox{width:20vw;padding:1vw;background-color:#fff;border-radius:8px;margin:0 auto}input{margin-top:1.3vh;margin-bottom:1.3vh;padding:.3vw;width:18vw;height:4vh;border:1px solid #000;border-radius:4px;background-color:#f9f9ff;color:#03010e;font-size:1.2rem}input:focus{border-color:#060316}h1{font-family:'IBM Plex Serif',serif;color:#fff;text-align:center;font-size:4.8rem}button{margin-top:1vh;width:100%;height:5vh;border:1px solid #000;border-radius:4px;background-color:#e1ddff;color:#000;font-size:1rem;font-weight:700}button:hover{background-color:#0a042d;color:#fff;font-style:italic}
+      @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,600&family=IBM+Plex+Serif&display=swap");*{box-sizing:border-box;font-family:Barlow,sans-serif,serif}body{margin:0;padding:0;display:flex;justify-content:center;align-items:center;min-height:100vh;background-image:url("https://images.unsplash.com/photo-1614724723656-457e78e0b50b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2017&q=80");background-size:cover;background-position:center}main{display:block;width:49vw}div.loginbox{width:20vw;padding:1vw;background-color:#fff;border-radius:8px;margin:0 auto}input{margin-top:1.3vh;margin-bottom:1.3vh;padding:.3vw;width:18vw;height:4vh;border:1px solid #000;border-radius:4px;background-color:#f9f9ff;color:#03010e;font-size:1.2rem}input:focus{border-color:#060316}h1{font-family:"IBM Plex Serif",serif;color:#fff;text-align:center;font-size:4.8rem}button{margin-top:1vh;width:100%;height:5vh;border:1px solid #000;border-radius:4px;background-color:#e1ddff;color:#000;font-size:1rem;font-weight:700}button:hover{background-color:#0a042d;color:#fff;font-style:italic}#checkbox{height:.8vw;width:.8vw}.checkbox-label{cursor:pointer}p.responsive{display:none;color:#fff}
+      @media screen and (max-width:1200px){main,div.loginbox,input,h1,button,#checkbox,.checkbox-label{display:none}body{background-color:#000;background-image:none}p.responsive{display:block;text-align:center;font-size:4rem}}@media screen and (max-width:800px){p.responsive{font-size:2rem}}
     </style>
 </head>
 <body>
@@ -17,15 +18,15 @@
       <div class="loginbox">
         <form action="action_page.php" method="post">
           <label>what is your e-mailing address?</label>
-          <input type="text" name="email" required/>
+          <input type="text" name="email" placeholder="someone@email.com" required/>
           <label>what should be your sobriquet?</label>
-          <input type="text" name="username" required/>
+          <input type="text" name="username" placeholder="username" required/>
           <label>what would be the pass-word that protects your data?</label>
           <input type="password" name="password" required/>
           <label>confirm you truly know that which protect your data.</label>
           <input type="password" name="password" required/>
-          <label for="myCheckbox">
-            <input type="checkbox" name="myCheckbox" id="myCheckbox">
+          <label class="checkbox-label">
+            <input type="checkbox" name="myCheckbox" id="checkbox">
             I agree that all the above information are valid.
           </label>
           <button type="button" name="submit" value="register" role="button">Enter the fray.</button>
@@ -33,5 +34,6 @@
       </div>
     </div>
   </main>
+  <p class="responsive">This page is not responsive :(</p>
 </body>
 </html>
